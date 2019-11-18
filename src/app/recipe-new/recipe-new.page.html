@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>New Recipe</ion-title>
+    <ion-buttons >
+      <ion-button routerLink="/" routerDirection="back">
+        Back
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content-background" no-bounce>
+  <form (submit)="addRecipe()" class="form-div">
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked">Type</ion-label>
+        <ion-select [(ngModel)]="newRecipe.type" interface="action-sheet" name="type" >
+          <ion-select-option value="Breakfast">Breakfast</ion-select-option>
+          <ion-select-option value="Brunch">Brunch</ion-select-option>
+          <ion-select-option value="Lunch">Lunch</ion-select-option>
+          <ion-select-option value="Dinner">Dinner</ion-select-option>
+          <ion-select-option value="Dessert">Dessert</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Description</ion-label>
+        <ion-input type="text" [(ngModel)]="newRecipe.description" name="description"> </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Directions</ion-label>
+        <ion-input type="test" [(ngModel)]="newRecipe.directions" name="cost"> </ion-input>
+      </ion-item>
+
+      <ion-button expand="full" type="submit" [disabled]="inputCheck()">Submit</ion-button>
+    </ion-list>
+
+  </form>
+
+</ion-content>

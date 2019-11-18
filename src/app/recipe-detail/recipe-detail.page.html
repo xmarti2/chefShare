@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Recipe Detail</ion-title>
+    <ion-buttons >
+      <ion-button routerLink="/" routerDirection="back">
+        Back
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <h4>{{ recipe.description }} - {{ recipe.user }}</h4>
+  <div>{{ recipe.type }}</div>
+  <div>{{ recipe.directions }}</div>
+</ion-content>

@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Recipes
+    </ion-title>
+    <ion-buttons slot="end" (click)="newRecipe()">
+      <ion-icon slot="icon-only" name="add"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let item of recipeService.recipes" (click)="onSelect(item)">
+    <ion-card-header>
+      <ion-icon name="cash" slot="start"></ion-icon>
+      {{ item.description }} - {{ item.user }}
+    </ion-card-header>
+    <ion-card-content>
+      {{ item.type }}
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "chefShare",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

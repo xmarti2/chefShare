@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Popular Recipes
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+    <ion-card button="true" (click)=openNative(item.sourceUrl) class="welcome-card" *ngFor="let item of spoonacularService.spoonaculars">
+      <img src="{{ item.image }}" alt="" />
+      <ion-card-header>
+        <ion-card-subtitle>{{ item.sourceUrl }}</ion-card-subtitle>
+        <ion-card-title>{{ item.title }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>{{ item.readyInMinutes }} minutes</p>
+        <p>{{ item.servings}} servings</p>
+      </ion-card-content>
+    </ion-card>
+
+</ion-content>
