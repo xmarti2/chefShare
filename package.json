@@ -1,7 +1,7 @@
 {
   "name": "chefShare",
-  "version": "0.0.1",
-  "author": "Ionic Framework",
+  "version": "0.0.2",
+  "author": "Xavier Martinez",
   "homepage": "https://ionicframework.com/",
   "scripts": {
     "ng": "ng",

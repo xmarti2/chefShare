@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'list', // JDavis: changing from 'home' to 'list'.
+    redirectTo: 'home', // JDavis: changing from 'home' to 'list'.
     pathMatch: 'full'
   },
   {
